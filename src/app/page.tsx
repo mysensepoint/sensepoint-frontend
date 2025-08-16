@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 /**
  * 메인 페이지 컴포넌트 - Sense Makers 매거진 앱
- * 
+ *
  * 모바일 앱 UI를 모방한 레이아웃으로, 다음과 같은 구조를 가짐:
  * - 상단 상태바 (시간, 배터리 등)
  * - 헤더 네비게이션
@@ -15,51 +15,49 @@ function HomePage() {
   return (
     <div
       style={{
-        width: '100%',
-        height: '100%',
-        background: 'white',
-        overflow: 'hidden',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
+        width: "100%",
+        height: "100%",
+        background: "white",
+        overflow: "hidden",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "center",
         gap: 18,
-        display: 'inline-flex'
+        display: "inline-flex",
       }}
     >
       {/* 상단 영역 - 상태바와 헤더 컨테이너 */}
       <div
         style={{
-          alignSelf: 'stretch',
-          flexDirection: 'column',
-          justifyContent: 'flex-start',
-          alignItems: 'center',
-          display: 'flex'
+          alignSelf: "stretch",
+          flexDirection: "column",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          display: "flex",
         }}
       >
         {/* 모바일 상태바 - 시간, 신호강도, 배터리 표시 */}
         <div
           style={{
-            width: '100%',
-            maxWidth: 768,
-            minWidth: 320,
+            width: "100%",
             paddingBottom: 20,
-            background: 'white',
-            overflow: 'hidden',
-            justifyContent: 'flex-start',
-            alignItems: 'flex-start',
+            background: "white",
+            overflow: "hidden",
+            justifyContent: "flex-start",
+            alignItems: "flex-start",
             gap: 10,
-            display: 'inline-flex'
+            display: "inline-flex",
           }}
         >
           {/* 상태바 내용: 시간, 중앙 공간, 배터리/신호 아이콘들 */}
           <div
             style={{
-              flex: '1 1 0',
+              flex: "1 1 0",
               paddingLeft: 30,
               paddingRight: 30,
-              justifyContent: 'space-between',
-              alignItems: 'flex-end',
-              display: 'flex'
+              justifyContent: "space-between",
+              alignItems: "flex-end",
+              display: "flex",
             }}
           >
             {/* 시간 표시 영역 */}
@@ -69,8 +67,8 @@ function HomePage() {
               style={{
                 width: 54,
                 height: 21,
-                position: 'relative',
-                borderRadius: 24
+                position: "relative",
+                borderRadius: 24,
               }}
             >
               <div
@@ -79,14 +77,14 @@ function HomePage() {
                   height: 20,
                   left: 0,
                   top: 1,
-                  position: 'absolute',
-                  textAlign: 'center',
-                  color: 'rgba(0, 0, 0, 0.20)',
+                  position: "absolute",
+                  textAlign: "center",
+                  color: "rgba(0, 0, 0, 0.20)",
                   fontSize: 17,
-                  fontFamily: 'Pretendard',
-                  fontWeight: '600',
+                  fontFamily: "Pretendard",
+                  fontWeight: "600",
                   lineHeight: 22,
-                  wordWrap: 'break-word'
+                  wordWrap: "break-word",
                 }}
               >
                 9:41
@@ -102,9 +100,9 @@ function HomePage() {
               data-charging="False"
               data-dark-mode="False"
               style={{
-                width: 27.40,
+                width: 27.4,
                 height: 13,
-                position: 'relative'
+                position: "relative",
               }}
             >
               {/* 배터리 외곽선 */}
@@ -114,23 +112,24 @@ function HomePage() {
                   height: 13,
                   left: 0,
                   top: 0,
-                  position: 'absolute',
+                  position: "absolute",
                   opacity: 0.35,
                   borderRadius: 4,
-                  border: '1px rgba(0, 0, 0, 0.20) solid'
+                  border: "1px rgba(0, 0, 0, 0.20) solid",
                 }}
               />
 
               {/* 배터리 양극 단자 */}
               <div
                 style={{
-                  width: 1.40,
+                  width: 1.4,
                   height: 4.22,
                   left: 26,
                   top: 5,
-                  position: 'absolute',
-                  opacity: 0.40,
-                  background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20), #424242'
+                  position: "absolute",
+                  opacity: 0.4,
+                  background:
+                    "linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20), #424242",
                 }}
               />
 
@@ -141,9 +140,10 @@ function HomePage() {
                   height: 9,
                   left: 2,
                   top: 2,
-                  position: 'absolute',
-                  background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20), #424242',
-                  borderRadius: 2
+                  position: "absolute",
+                  background:
+                    "linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20), #424242",
+                  borderRadius: 2,
                 }}
               />
             </div>
@@ -153,194 +153,36 @@ function HomePage() {
               style={{
                 width: 18,
                 height: 12,
-                background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20), #424242'
+                background:
+                  "linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(0, 0, 0, 0.20), rgba(0, 0, 0, 0.20), #424242",
               }}
             />
           </div>
         </div>
 
-        {/* 앱 헤더 네비게이션 바 */}
-        <div
-          style={{
-            width: '100%',
-            maxWidth: 768,
-            minWidth: 320,
-            paddingLeft: 30,
-            paddingRight: 30,
-            paddingTop: 16,
-            paddingBottom: 16,
-            overflow: 'hidden',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            display: 'inline-flex'
-          }}
-        >
-          {/* 좌측 네비게이션 영역 - 로고/브랜드 아이콘 */}
-          <div
-            style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: 10,
-              display: 'flex'
-            }}
-          >
-            {/* 브랜드 로고 컨테이너 */}
-            <div
-              style={{
-                width: 32,
-                height: 32,
-                paddingLeft: 3,
-                paddingRight: 3,
-                justifyContent: 'flex-start',
-                alignItems: 'center',
-                gap: 10,
-                display: 'flex'
-              }}
-            >
-              {/* 로고 아이콘 래퍼 */}
-              <div
-                style={{
-                  width: 26,
-                  height: 32,
-                  padding: 2,
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  display: 'flex'
-                }}
-              >
-                {/* 로고 그래픽 - 추상적인 기하학적 형태들로 구성 */}
-                <div
-                  style={{
-                    width: 22,
-                    height: 28,
-                    position: 'relative',
-                    overflow: 'hidden'
-                  }}
-                >
-                  {/* 로고의 구성 요소들 - 추상적인 기하학적 형태들로 브랜드 아이덴티티 표현 */}
-                  <div
-                    style={{
-                      width: 21.59,
-                      height: 13.63,
-                      left: 0.41,
-                      top: 14.36,
-                      position: 'absolute',
-                      background: '#878277'
-                    }}
-                  />
-                  <div
-                    style={{
-                      width: 13.86,
-                      height: 8.81,
-                      left: 3.29,
-                      top: 14.36,
-                      position: 'absolute',
-                      background: '#878277'
-                    }}
-                  />
-                  <div
-                    style={{
-                      width: 6.17,
-                      height: 3.97,
-                      left: 6.19,
-                      top: 14.38,
-                      position: 'absolute',
-                      background: '#878277'
-                    }}
-                  />
-                  <div
-                    style={{
-                      width: 21.58,
-                      height: 13.63,
-                      left: 0,
-                      top: 0,
-                      position: 'absolute',
-                      background: '#878277'
-                    }}
-                  />
-                  <div
-                    style={{
-                      width: 13.86,
-                      height: 8.81,
-                      left: 4.84,
-                      top: 4.82,
-                      position: 'absolute',
-                      background: '#878277'
-                    }}
-                  />
-                  <div
-                    style={{
-                      width: 6.17,
-                      height: 3.97,
-                      left: 9.64,
-                      top: 9.65,
-                      position: 'absolute',
-                      background: '#878277'
-                    }}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* 우측 네비게이션 영역 - 메뉴/설정 아이콘 */}
-          <div
-            style={{
-              paddingTop: 1,
-              paddingBottom: 1,
-              flexDirection: 'column',
-              justifyContent: 'flex-start',
-              alignItems: 'flex-start',
-              gap: 10,
-              display: 'inline-flex'
-            }}
-          >
-            {/* 메뉴 버튼 컨테이너 */}
-            <div
-              style={{
-                alignSelf: 'stretch',
-                padding: 4,
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                gap: 10,
-                display: 'flex'
-              }}
-            >
-              {/* 햄버거 메뉴 아이콘 */}
-              <div
-                style={{
-                  width: 24,
-                  height: 22,
-                  outline: '1.50px black solid',
-                  outlineOffset: '-0.75px'
-                }}
-              />
-            </div>
-          </div>
-        </div>
+        {/* 네비게이션은 layout.tsx에서 처리됨 */}
       </div>
 
       {/* 메인 콘텐츠 영역 */}
       <div
         data-속성-1="main"
         style={{
-          alignSelf: 'stretch',
-          flex: '1 1 0',
-          flexDirection: 'column',
-          justifyContent: 'flex-start',
-          alignItems: 'center',
+          alignSelf: "stretch",
+          flex: "1 1 0",
+          flexDirection: "column",
+          justifyContent: "flex-start",
+          alignItems: "center",
           gap: 18,
-          display: 'flex'
+          display: "flex",
         }}
       >
         {/* 페이지네이션 인디케이터 - 현재 페이지 위치 표시 */}
         <div
           style={{
-            justifyContent: 'center',
-            alignItems: 'flex-start',
+            justifyContent: "center",
+            alignItems: "flex-start",
             gap: 4,
-            display: 'inline-flex'
+            display: "inline-flex",
           }}
         >
           {/* 현재 활성 페이지 도트 */}
@@ -348,8 +190,8 @@ function HomePage() {
             style={{
               width: 6.39,
               height: 6,
-              background: '#ADA797',
-              borderRadius: 9999
+              background: "#ADA797",
+              borderRadius: 9999,
             }}
           />
 
@@ -358,24 +200,24 @@ function HomePage() {
             style={{
               width: 6.39,
               height: 6,
-              background: '#E9E5DC',
-              borderRadius: 9999
+              background: "#E9E5DC",
+              borderRadius: 9999,
             }}
           />
           <div
             style={{
               width: 6.39,
               height: 6,
-              background: '#E9E5DC',
-              borderRadius: 9999
+              background: "#E9E5DC",
+              borderRadius: 9999,
             }}
           />
           <div
             style={{
               width: 6.39,
               height: 6,
-              background: '#E9E5DC',
-              borderRadius: 9999
+              background: "#E9E5DC",
+              borderRadius: 9999,
             }}
           />
         </div>
@@ -385,20 +227,21 @@ function HomePage() {
           style={{
             width: 402,
             height: 714.64,
-            flexDirection: 'column',
-            justifyContent: 'flex-start',
-            alignItems: 'center',
-            display: 'flex'
+            flexDirection: "column",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            display: "flex",
           }}
         >
           {/* 메인 배경 이미지 - 180도 회전되어 있음, 하단에 그라데이션 오버레이 적용 */}
           <img
             style={{
-              alignSelf: 'stretch',
-              flex: '1 1 0',
-              transform: 'rotate(180deg)',
-              transformOrigin: 'top left',
-              background: 'linear-gradient(180deg, rgba(76, 73, 70, 0) 0%, rgba(76, 73, 70, 0.85) 100%), rgba(233, 229, 220, 0.30)'
+              alignSelf: "stretch",
+              flex: "1 1 0",
+              transform: "rotate(180deg)",
+              transformOrigin: "top left",
+              background:
+                "linear-gradient(180deg, rgba(76, 73, 70, 0) 0%, rgba(76, 73, 70, 0.85) 100%), rgba(233, 229, 220, 0.30)",
             }}
             src="https://placehold.co/402x715"
             alt="Magazine background"
@@ -410,32 +253,32 @@ function HomePage() {
           style={{
             width: 402,
             height: 715,
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            alignItems: 'flex-start',
-            display: 'flex'
+            flexDirection: "column",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+            display: "flex",
           }}
         >
           {/* 상단 콘텐츠 영역 - 제목과 저자 정보 */}
           <div
             style={{
-              alignSelf: 'stretch',
-              flexDirection: 'column',
-              justifyContent: 'flex-start',
-              alignItems: 'flex-start',
-              display: 'flex'
+              alignSelf: "stretch",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              alignItems: "flex-start",
+              display: "flex",
             }}
           >
             {/* 제목과 저자 헤더 */}
             <div
               style={{
-                alignSelf: 'stretch',
+                alignSelf: "stretch",
                 paddingTop: 40,
                 paddingLeft: 30,
                 paddingRight: 30,
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                display: 'inline-flex'
+                justifyContent: "space-between",
+                alignItems: "center",
+                display: "inline-flex",
               }}
             >
               {/* 매거진 제목 */}
@@ -443,12 +286,12 @@ function HomePage() {
                 style={{
                   width: 246,
                   height: 24,
-                  color: '#E9E5DC',
+                  color: "#E9E5DC",
                   fontSize: 16,
-                  fontFamily: 'GyeonggiBatangOTF',
-                  fontWeight: '700',
-                  lineHeight: 22.40,
-                  wordWrap: 'break-word'
+                  fontFamily: "GyeonggiBatangOTF",
+                  fontWeight: "700",
+                  lineHeight: 22.4,
+                  wordWrap: "break-word",
                 }}
               >
                 [Sense Makers] Vol.1
@@ -459,13 +302,13 @@ function HomePage() {
                 style={{
                   width: 96.48,
                   height: 15.25,
-                  textAlign: 'right',
-                  color: '#E9E5DC',
+                  textAlign: "right",
+                  color: "#E9E5DC",
                   fontSize: 10,
-                  fontFamily: 'GyeonggiBatangOTF',
-                  fontWeight: '700',
+                  fontFamily: "GyeonggiBatangOTF",
+                  fontWeight: "700",
                   lineHeight: 14,
-                  wordWrap: 'break-word'
+                  wordWrap: "break-word",
                 }}
               >
                 Written by 유림(愉林)
@@ -475,16 +318,16 @@ function HomePage() {
             {/* 추가 콘텐츠 영역 (현재 비어있음) */}
             <div
               style={{
-                alignSelf: 'stretch',
+                alignSelf: "stretch",
                 paddingLeft: 30,
                 paddingRight: 30,
                 paddingTop: 10,
                 paddingBottom: 10,
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'flex-start',
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "flex-start",
                 gap: 10,
-                display: 'flex'
+                display: "flex",
               }}
             >
               {/* 빈 공간 - 향후 콘텐츠 추가 예정 영역 */}
@@ -492,7 +335,7 @@ function HomePage() {
                 style={{
                   width: 220,
                   height: 138,
-                  position: 'relative'
+                  position: "relative",
                 }}
               />
             </div>
@@ -501,28 +344,28 @@ function HomePage() {
           {/* 하단 콘텐츠 영역 - 본문 텍스트와 읽기 버튼 */}
           <div
             style={{
-              alignSelf: 'stretch',
+              alignSelf: "stretch",
               height: 290,
-              flexDirection: 'column',
-              justifyContent: 'flex-start',
-              alignItems: 'center',
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              alignItems: "center",
               gap: 30,
-              display: 'flex'
+              display: "flex",
             }}
           >
             {/* 본문 텍스트 영역 */}
             <div
               style={{
-                alignSelf: 'stretch',
+                alignSelf: "stretch",
                 height: 115,
                 paddingLeft: 30,
                 paddingRight: 30,
-                overflow: 'hidden',
-                flexDirection: 'column',
-                justifyContent: 'flex-start',
-                alignItems: 'flex-start',
+                overflow: "hidden",
+                flexDirection: "column",
+                justifyContent: "flex-start",
+                alignItems: "flex-start",
                 gap: 4,
-                display: 'flex'
+                display: "flex",
               }}
             >
               {/* 본문 텍스트 컨테이너 */}
@@ -531,7 +374,7 @@ function HomePage() {
                 style={{
                   width: 342,
                   height: 115,
-                  position: 'relative'
+                  position: "relative",
                 }}
               >
                 {/* 기사 본문 텍스트 - 현재 투명도 0으로 설정되어 숨겨진 상태 */}
@@ -540,14 +383,14 @@ function HomePage() {
                     width: 342,
                     left: 0,
                     top: 0,
-                    position: 'absolute',
+                    position: "absolute",
                     opacity: 0,
-                    color: '#E9E5DC',
+                    color: "#E9E5DC",
                     fontSize: 12,
-                    fontFamily: 'GyeonggiBatangOTF',
-                    fontWeight: '700',
-                    lineHeight: 22.80,
-                    wordWrap: 'break-word'
+                    fontFamily: "GyeonggiBatangOTF",
+                    fontWeight: "700",
+                    lineHeight: 22.8,
+                    wordWrap: "break-word",
                   }}
                 >
                   서울 길음동의 오래된 이발소,
@@ -570,22 +413,22 @@ function HomePage() {
                 width: 402,
                 height: 145,
                 paddingBottom: 80,
-                flexDirection: 'column',
-                justifyContent: 'flex-start',
-                alignItems: 'center',
-                display: 'flex'
+                flexDirection: "column",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                display: "flex",
               }}
             >
               {/* '더 읽기' 버튼 텍스트 - 현재 투명도 0으로 설정되어 숨겨진 상태 */}
               <div
                 style={{
-                  textAlign: 'center',
-                  color: 'rgba(233, 229, 220, 0)',
+                  textAlign: "center",
+                  color: "rgba(233, 229, 220, 0)",
                   fontSize: 14,
-                  fontFamily: 'GyeonggiBatangOTF',
-                  fontWeight: '700',
-                  lineHeight: 19.60,
-                  wordWrap: 'break-word'
+                  fontFamily: "GyeonggiBatangOTF",
+                  fontWeight: "700",
+                  lineHeight: 19.6,
+                  wordWrap: "break-word",
                 }}
               >
                 Read More
@@ -594,14 +437,14 @@ function HomePage() {
               {/* 스크롤 또는 네비게이션 인디케이터 영역 */}
               <div
                 style={{
-                  alignSelf: 'stretch',
+                  alignSelf: "stretch",
                   height: 32,
                   padding: 4,
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  alignItems: 'center',
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
                   gap: 10,
-                  display: 'flex'
+                  display: "flex",
                 }}
               >
                 {/* 스크롤 인디케이터 또는 화살표 아이콘들 - 현재 투명도 0으로 설정 */}
@@ -609,16 +452,16 @@ function HomePage() {
                   style={{
                     width: 24,
                     height: 12,
-                    outline: '1.50px rgba(233, 229, 220, 0) solid',
-                    outlineOffset: '-0.75px'
+                    outline: "1.50px rgba(233, 229, 220, 0) solid",
+                    outlineOffset: "-0.75px",
                   }}
                 />
                 <div
                   style={{
                     width: 24,
                     height: 12,
-                    outline: '1.50px rgba(233, 229, 220, 0) solid',
-                    outlineOffset: '-0.75px'
+                    outline: "1.50px rgba(233, 229, 220, 0) solid",
+                    outlineOffset: "-0.75px",
                   }}
                 />
               </div>
