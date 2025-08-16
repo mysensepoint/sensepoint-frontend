@@ -16,6 +16,7 @@ interface CarouselProps {
   currentIndex?: number;
   onSlideChange?: (index: number) => void;
   className?: string;
+  adjustLastItemHeight?: boolean; // 추가
 }
 
 const Carousel: React.FC<CarouselProps> = ({
@@ -23,6 +24,7 @@ const Carousel: React.FC<CarouselProps> = ({
   currentIndex: externalCurrentIndex,
   onSlideChange,
   className = "",
+  adjustLastItemHeight = false, // 추가
 }) => {
   const [internalCurrentIndex, setInternalCurrentIndex] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
@@ -163,7 +165,7 @@ const Carousel: React.FC<CarouselProps> = ({
           transition: isDragging ? "none" : "transform 0.3s ease-out",
         }}
       >
-        {items.map((item) => (
+        {items.map((item, idx) => (
           <div
             key={item.id}
             className="carousel-slide"
@@ -175,6 +177,11 @@ const Carousel: React.FC<CarouselProps> = ({
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
+            style={
+              adjustLastItemHeight && idx === items.length - 1
+                ? { height: '80%' } // 마지막 슬라이드가 잘릴 경우 세로 비율 축소
+                : {}
+            }
           >
             <div className="slide-image">
               <img src={item.image} alt={item.title} />

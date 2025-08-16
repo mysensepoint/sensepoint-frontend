@@ -79,6 +79,8 @@ function HomePage() {
           items={carouselItems}
           currentIndex={currentSlide}
           onSlideChange={handleSlideChange}
+          // 아래 props 추가: 잘리는 경우 마지막 요소 비율 조정
+          adjustLastItemHeight={true}
         />
       </div>
 
@@ -89,23 +91,34 @@ function HomePage() {
           display: flex;
           flex-direction: column;
           background: white;
+          overflow: hidden; /* 모바일 화면에 맞게 스크롤 숨김 */
+          position: relative;
         }
 
         .indicator-section {
           flex-shrink: 0;
           z-index: 10;
           position: relative;
+          height: 56px; /* 네비게이션 바 높이 고려 */
         }
 
         .carousel-section {
           flex: 1;
           position: relative;
+          overflow-y: auto;
+          max-height: calc(100vh - 56px); /* 상단 indicator 제외한 높이 */
+          display: flex;
+          flex-direction: column;
         }
 
         /* 모바일 최적화 */
         @media (max-width: 768px) {
           .main-page {
             height: 100vh;
+            max-height: 100vh;
+          }
+          .carousel-section {
+            max-height: calc(100vh - 56px);
           }
         }
       `}</style>
