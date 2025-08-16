@@ -1,0 +1,86 @@
+/* 경기천년체 폰트 정의 */
+
+@font-face {
+  font-family: "GyeonggiCheonnyeonche";
+  src: url("/fonts/GyeonggiCheonnyeonche.woff2") format("woff2"),
+    url("/fonts/GyeonggiCheonnyeonche.woff") format("woff"),
+    url("/fonts/GyeonggiCheonnyeonche.ttf") format("truetype"),
+    url("/fonts/GyeonggiCheonnyeonche.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GyeonggiCheonnyeonche";
+  src: url("/fonts/GyeonggiCheonnyeonche-Bold.woff2") format("woff2"),
+    url("/fonts/GyeonggiCheonnyeonche-Bold.woff") format("woff"),
+    url("/fonts/GyeonggiCheonnyeonche-Bold.ttf") format("truetype"),
+    url("/fonts/GyeonggiCheonnyeonche-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GyeonggiCheonnyeonche";
+  src: url("/fonts/GyeonggiCheonnyeonche-Light.woff2") format("woff2"),
+    url("/fonts/GyeonggiCheonnyeonche-Light.woff") format("woff"),
+    url("/fonts/GyeonggiCheonnyeonche-Light.ttf") format("truetype"),
+    url("/fonts/GyeonggiCheonnyeonche-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GyeonggiCheonnyeonche";
+  src: url("/fonts/GyeonggiCheonnyeonche-Medium.woff2") format("woff2"),
+    url("/fonts/GyeonggiCheonnyeonche-Medium.woff") format("woff"),
+    url("/fonts/GyeonggiCheonnyeonche-Medium.ttf") format("truetype"),
+    url("/fonts/GyeonggiCheonnyeonche-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 폰트 변수 정의 */
+:root {
+  --font-gyeonggi: "GyeonggiCheonnyeonche", "Georgia", "Times New Roman", serif;
+}
+
+/* 전역 폰트 적용 */
+body {
+  font-family: var(--font-gyeonggi);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* 제목용 폰트 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-gyeonggi);
+  font-weight: 700;
+}
+
+/* 특별한 강조 텍스트 */
+.emphasis-text {
+  font-family: var(--font-gyeonggi);
+  font-weight: 700;
+}
+
+/* 가벼운 텍스트 */
+.light-text {
+  font-family: var(--font-gyeonggi);
+  font-weight: 300;
+}
+
+/* 중간 굵기 텍스트 */
+.medium-text {
+  font-family: var(--font-gyeonggi);
+  font-weight: 500;
+}
