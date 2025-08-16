@@ -264,7 +264,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
           position: absolute;
           top: 72px;
           right: 0;
-          width: 480px;
+          width: 768px;
           max-width: 100vw;
           height: calc(100vh - 72px);
           background: white;
@@ -398,12 +398,26 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
           }
         }
 
-        /* 데스크톱에서 모바일 레이아웃 우측 정렬 */
-        @media (min-width: 481px) {
+        /* 데스크탑 환경에서 메뉴가 모바일처럼 우측에서 슬라이드 */
+        @media (min-width: 769px) {
           .menu-content {
-            right: calc(50vw - 240px);
+            right: calc(50vw - 384px);
+            animation: slideInFromRightDesktop 0.3s ease-out;
+          }
+
+          @keyframes slideInFromRightDesktop {
+            from {
+              transform: translateX(400px);
+              opacity: 0;
+            }
+            to {
+              transform: translateX(0);
+              opacity: 1;
+            }
           }
         }
+
+        
       `}</style>
     </div>
   );

@@ -40,7 +40,7 @@ export default function RootLayout({
         <div
           style={{
             width: "100%",
-            maxWidth: "480px",
+            maxWidth: "768px",
             minHeight: "100vh",
             backgroundColor: "white",
             boxShadow: "0 0 20px rgba(0, 0, 0, 0.1)",
