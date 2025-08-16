@@ -101,7 +101,7 @@ const Navigation: React.FC<NavigationProps> = ({ className = "" }) => {
                     #Our Sense Point
                   </a>
                   <a
-                    href="/sense-archive"
+                    href="/contents/sense-archive"
                     className="menu-item"
                     onClick={closeMenu}
                   >
