@@ -25,7 +25,7 @@ function PostList() {
   return (
     <div>
       <h1>WordPress Posts</h1>
-      {data.posts.nodes.map((post: any) => (
+      {data.posts.nodes.map((post: { id: string; title: string; content: string }) => (
         <div key={post.id}>
           <h2>{post.title}</h2>
           <div dangerouslySetInnerHTML={{__html: post.content}} />
